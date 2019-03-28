@@ -6,8 +6,8 @@ import { Component, Vue, Prop } from 'vue-property-decorator'
 @Component
 export default class DefaultImg extends Vue {
     private imgSrc:string = ''
-    @Prop(String) readonly src!: string
-    @Prop(String) readonly defaultUrl!: string
+    @Prop(String) private readonly src!: string
+    @Prop(String) private readonly defaultUrl!: string
     created(): void {
         this.imgSrc = this.src
         console.log(this.defaultUrl)
